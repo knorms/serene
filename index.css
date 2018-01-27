@@ -15,12 +15,3 @@ ul {
 .class1 {
     border-style: dashed
 }
-
-/*#id will edit only sepcific element*/
-#class_ad {
-    border-radius: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    border: 10px solid #699;
-}
