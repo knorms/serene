@@ -1,18 +1,27 @@
-var express = require("express");
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var sd = require('standard-deviation')
+//1.
+var http = require('http');
+var fs = require('fs');
+//2.
+var server = http.createServer(function (req, resp) {
+    //3.
+    if (req.url === "/") {
+        fs.readFile("index.html", function (error, pgResp) {
+            if (error) {
+                resp.writeHead(404);
+                resp.write('Contents you are looking are Not Found');
+            } else {
+                resp.writeHead(200, { 'Content-Type': 'text/html' });
+                resp.write(pgResp);
+            }
 
-app.use("/js", express.static(__dirname + '/js'));
-
-io.on('connection', function(socket){
-  console.log('a user connected');
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
+            resp.end();
+        });
+    } else {
+        //4.
+        resp.writeHead(200, { 'Content-Type': 'text/html' });
+        resp.write('<h1>Product Manaager</h1><br /><br />To create product please enter: ' + req.url);
+        resp.end();
+    }
 });
-
-http.listen(3000, function () {
-    console.log('listening on *:3000');
-});
+//5.
+server.listen(3000);
