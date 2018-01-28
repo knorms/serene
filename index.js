@@ -1,6 +1,9 @@
 //1.
 var http = require('http');
 var fs = require('fs');
+
+//=> <h2 class = "title welcome">Hello there!</h2>
+
 //2.
 var server = http.createServer(function (req, resp) {
     //3.
@@ -23,5 +26,8 @@ var server = http.createServer(function (req, resp) {
         resp.end();
     }
 });
+
+console.log('hi');
+
 //5.
 server.listen(3000);
