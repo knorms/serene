@@ -5,21 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="shehacks_styles.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+<script src="jquery/jquery.min.js"></script> <!-- Bootstrap Core JavaScript -->
+<script>
+  inspirationArray = new Array();
+  inspirationArray[0] = "img1.jpg";
+  inspirationArray[1] = "img2.jpg";
+  inspirationArray[2] = "img3.jpg";
+
+  $(document).ready(function() {
+    var num = Math.floor(Math.random() * 3);
+    var img = inspirationArray[num];
+    console.log(document.getElementById("changing_images").src);
+    document.getElementById("changing_images").src = img;
+    $("#changing_images").attr('src', img);
+  });
+
+
+</script>
 <body>
+<div id="randImage"></div>
 
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-teal w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-teal" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#healthstats" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Health Stats</a>
-    <a href="#whatdo" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">What you can do</a>
-    <a href="#resources" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resources</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white" style="font-family: 'Roboto Slab', serif;">Home</a>
+    <a href="#healthstats" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="font-family: 'Roboto Slab', serif;">Health Stats</a>
+    <a href="#whatdo" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="font-family: 'Roboto Slab', serif;">What you can do</a>
+    <a href="#unwind" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="font-family: 'Roboto Slab', serif;">Unwind</a>
+    <a href="#resources" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="font-family: 'Roboto Slab', serif;">Resources</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -32,39 +53,40 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-teal w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Welcome to Serene</h1>
+<header class="w3-container w3-teal w3-center" style="padding:128px 16px" >
+  <h1 class="w3-margin w3-jumbo" style = "font-family: 'Dancing Script', cursive;">Welcome to Serene</h1>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container" id="healthstats">
   <div class="w3-content">
     <div class="w3-third w3-left-align">
-      <i class="fa fa-male w3-padding-32 w3-text-teal" aria-hidden="true" style="font-size: 7em;"></i>
+      <i class="fa fa-male w3-padding-64 w3-text-teal" aria-hidden="true" style="font-size: 7em;"></i>
         <i class="fa fa-male w3-padding-16 w3-text-grey" aria-hidden="true" style="font-size: 7em;"></i>
         <i class="fa fa-male w3-padding-16 w3-text-grey" aria-hidden="true" style="font-size: 7em;"></i>
         <i class="fa fa-male w3-padding-16 w3-text-grey" aria-hidden="true" style="font-size: 7em;"></i>
         <i class="fa fa-male w3-padding-16 w3-text-grey" aria-hidden="true" style="font-size: 7em;"></i>
         
     </div>
-    <div class="w3-twothird">
-      <h1>You are not alone.</h1>
-      <h5 class="w3-padding-16">Did you know approximately 1 in 5 youth aged 13–18 (21.4%) live with a mental health condition?</h5>
 
-      <p class="w3-text-grey">Unfortunately the average delay between onset of symptoms and intervention is 8-10 years. Be the exception and pursue help now!</p>
+    <div class="w3-twothird" style = "padding:20px">
+      <h1 style="font-family: 'Roboto Slab', serif;">You are <b><i>not</i></b> alone.</h1>
+      <h5 class="w3-padding-16" style="font-family: 'Roboto Slab', serif;">Did you know approximately 1 in 5 youth aged 13–18 (21.4%) live with a mental health condition?</h5>
+
+      <p class="w3-text-grey" style="font-family: 'Roboto Slab', serif;">Unfortunately the average delay between onset of symptoms and intervention is 8-10 years. Be the exception and pursue help now!</p>
     </div>
 
   </div>
 </div>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="whatdo">
+<div class="w3-row-padding w3-light-blue w3-padding-32 w3-container" id="whatdo">
   <div class="w3-content">
     <div class="w3-cell-row">
-        <h1><span style="font-size: 2em">&#9888;</span> Know the Warning Signs</h1>
+        <h1 style = "font-family: 'Roboto Slab', serif; font-size: 35px"><span style="font-size: 2em">&#9888;</span> Know the Warning Signs</h1>
     </div>
       <div class=".w3-cell-row">
-            <h5><form> <input class="w3-check" type="checkbox" name="love" value="love"><label for="love"> Feeling very sad or withdrawn for more than 2 weeks (e.g., crying regularly, feeling fatigued, feeling unmotivated).</label> </form>
+            <h5 style = "font-family: 'Roboto Slab', serif; font-size: 17px"><form> <input class="w3-check" type="checkbox" name="love" value="love"><label for="love"> Feeling very sad or withdrawn for more than 2 weeks (e.g., crying regularly, feeling fatigued, feeling unmotivated).</label> </form>
             <form> <input class="w3-check" type="checkbox" name="love" value="love"><label for="love"> Trying to harm or kill oneself or making plans to do so.</label> </form>
             <form> <input class="w3-check" type="checkbox" name="love" value="love"><label for="love"> Severe mood swings that cause problems in relationships.</label> </form>
             <form> <input class="w3-check" type="checkbox" name="love" value="love"><label for="love"> Repeated use of drugs or alcohol.</label> </form>
@@ -80,21 +102,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
     
 <!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container" id="resources">
+<div class="w3-row-padding w3-padding-32 w3-container" id="unwind">
   <div class="w3-content">
     <div class="w3-container">
-      <h1 class="w3-center">Consider Reaching Out</h1>
-      <h5 class="w3-padding-32"> If you have experienced any of the warning signs above, consider reaching out to a family member, close friend, teacher, coach, faith leader, or mental health professional.</h5>
+      <div class="w3-twothird">
+      <h1 class="w3-center" style = "font-family: 'Roboto Slab', serif; font-size: 35px" >Unwind</h1>
+      <h5 class="w3-padding-16" style = "text-align:left; float:left; font-family: 'Roboto Slab', serif;"> Self care is extremely important. Take a moment to relax and just <br> breathe. A few ways to undwind include taking a long walk, listening <br> to your favorite song, enjoying a good meal, or spending time with <br>people you love. You can also consider trying out one of these <br> meditation sessions:
 
-      <p class="w3-text-grey">Does reaching out seem too scary right now? You could try spending some time with our <a href="./index.html"  target="_blank">chatbot and/or journaling about what you're experiencing</a>, or performing a guided mindfulness meditation.</p>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=WHU2sjyD5MM&feature=youtu.be">Session One</a></li> 
+        <li><a href="https://www.youtube.com/watch?v=67SeR3LxtdI">Session Two</a></li>
+      </ul>
+
+       </h5>
+
+    </div>
+    <div class="w3-third">
+      <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX3rxVfibe1L0" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
     </div>
   </div>
 </div>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+<!-- Fourth Grid -->
+<div class="w3-row-padding w3-light-blue w3-padding-64 w3-container" id="resources">
+  <div class="w3-content">
+    <div class="w3-container">
+      <h1 class="w3-center" style = "font-family: 'Roboto Slab', serif; font-size: 35px" >Consider Reaching Out</h1>
+      <h5 class="w3-padding-16" style = "font-family: 'Roboto Slab', serif;> If you have experienced any of the warning signs above, consider reaching out to a family member, close friend, teacher, coach, faith leader, or mental health professional.</h5>
+
+      <p class="w3-text-grey">Does reaching out seem too scary right now? You could try spending some time with our chatbot, journaling about what you're experiencing, or a guided mindfulness meditation.</p>
+    </div>
+  </div>
 </div>
 
+<div class="w3-container w3-teal w3-center w3-padding-32">
+    <h1 class="w3-margin w3-xlarge" style ="font-family:'Dancing Script', cursive;"> " We acquire the strength we have overcome "</h1> 
+    <h1 style = "font-family: 'Roboto Slab', serif; font-size: 15px">- Ralph Waldo Emerson</h1>
+</div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
@@ -123,4 +168,3 @@ function myFunction() {
 
 </body>
 </html>
-
