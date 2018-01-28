@@ -1,17 +1,27 @@
-h2 {
-    border-bottom-style: double
+body {
+    background-color:#ffb496;
 }
 
-p {
-    background-color: cadetblue;
-    color: black
+h1 {
+    color: navy;
+    margin-left: 20px;
 }
 
-ul {
-    background-color: aqua
+.textpanel {
+    position: relative;
+    display:inline-block;
 }
-
-/*. required to indicate a class*/
-.class1 {
-    border-style: dashed
+.textpanel img {
+    display: block;
+}
+.textpanel textarea {
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    height: 800px;
+    width: 300px;
+    background:transparent;
+    outline:none;
+    font-size:20px;
+    border:none;
 }
