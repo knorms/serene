@@ -1,0 +1,27 @@
+body {
+    background-color:#ffb496;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+.textpanel {
+    position: relative;
+    display:inline-block;
+}
+.textpanel img {
+    display: block;
+}
+.textpanel textarea {
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    height: 800px;
+    width: 300px;
+    background:transparent;
+    outline:none;
+    font-size:20px;
+    border:none;
+}
