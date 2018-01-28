@@ -1,27 +1,23 @@
-//1.
-var http = require('http');
-var fs = require('fs');
-//2.
-var server = http.createServer(function (req, resp) {
-    //3.
-    if (req.url === "/") {
-        fs.readFile("index.html", function (error, pgResp) {
-            if (error) {
-                resp.writeHead(404);
-                resp.write('Contents you are looking are Not Found');
-            } else {
-                resp.writeHead(200, { 'Content-Type': 'text/html' });
-                resp.write(pgResp);
-            }
+var express = require("express");
 
-            resp.end();
-        });
-    } else {
-        //4.
-        resp.writeHead(200, { 'Content-Type': 'text/html' });
-        resp.write('<h1>Product Manaager</h1><br /><br />To create product please enter: ' + req.url);
-        resp.end();
-    }
-});
-//5.
-server.listen(3000);
+ //use the application off of express.
+ var app = express();
+
+ //define the route for "/"
+ app.get("/", function (request, response){
+     //show this file when the "/" is requested
+     response.sendFile(__dirname+"/index.html");
+ });
+ app.get("/songs", function (request, response){
+     //show this file when the "/" is requested
+     response.sendFile(__dirname+"/home.html");
+ });
+
+ //start the server
+ app.listen(3000);
+
+ console.log("Something awesome to happen at http://localhost:3000");
+
+ var googleMapsClient = require('@google/maps').createClient({
+   key: 'AIzaSyDhskVUhvYcIl1o33qJdqWvZOxplkczOHE'
+ });
